@@ -16,9 +16,9 @@ class PickedCheckbox extends StatelessWidget {
   final double size;
 
   const PickedCheckbox({
-    Key key,
-    @required this.checkIndex,
-    @required this.onClick,
+    Key? key,
+    required this.checkIndex,
+    required this.onClick,
     this.alignment = Alignment.topRight,
     this.radius = 30,
     this.pickedColor = Colors.blue,

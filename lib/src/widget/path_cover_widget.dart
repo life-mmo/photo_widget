@@ -10,8 +10,8 @@ class AssetPathCoverWidget extends StatelessWidget {
   final int index;
 
   const AssetPathCoverWidget({
-    Key key,
-    @required this.entity,
+    Key? key,
+    required this.entity,
     this.thumbSize = 120,
     this.fit = BoxFit.cover,
     this.index = 0,
@@ -60,8 +60,7 @@ class PathCoverImageProvider extends ImageProvider<PathCoverImageProvider> {
         (await key.entity.getAssetListRange(start: index, end: index + 1))[0];
 
     final bytes = await coverEntity.thumbDataWithSize(thumbSize, thumbSize);
-
-    return decode(bytes);
+    return decode(bytes!);
   }
 
   @override

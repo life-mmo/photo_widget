@@ -10,8 +10,8 @@ typedef Widget PickSureTextBuilder(
 
 class PickSureButton extends StatelessWidget {
   final PickerDataProvider provider;
-  final PickSureCallback onTap;
-  final PickSureTextBuilder builder;
+  final PickSureCallback? onTap;
+  final PickSureTextBuilder? builder;
   final double radius;
   final Color disableColor;
   final Color color;
@@ -21,8 +21,8 @@ class PickSureButton extends StatelessWidget {
   final EdgeInsetsGeometry padding;
 
   const PickSureButton({
-    Key key,
-    @required this.provider,
+    Key? key,
+    required this.provider,
     this.onTap,
     this.builder,
     this.radius = 3,
@@ -47,7 +47,7 @@ class PickSureButton extends StatelessWidget {
       builder: (_, __) {
         if (builder != null) {
           return InkWell(
-            child: builder(context, picked, provider.maxNotifier.value),
+            child: builder!(context, picked, provider.maxNotifier.value),
             onTap: () => onTap?.call(picked),
           );
         }
