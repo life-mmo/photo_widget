@@ -51,7 +51,7 @@ class PickedCheckbox extends StatelessWidget {
       child: GestureDetector(
         behavior: HitTestBehavior.translucent,
         onTap: () {
-          onClick?.call();
+          onClick.call();
         },
         child: Padding(
           padding: padding,

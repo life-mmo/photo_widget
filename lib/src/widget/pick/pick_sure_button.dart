@@ -41,7 +41,7 @@ class PickSureButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final disableStyle = this.disableTextStyle ?? textStyle;
+    final disableStyle = this.disableTextStyle;
     return AnimatedBuilder(
       animation: provider.pickedNotifier,
       builder: (_, __) {
